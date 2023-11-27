@@ -10,8 +10,8 @@ public partial class ModelContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        
-        optionsBuilder.UseOracle("ConnectionStrings:DefaultConnection");
+        string connectionString = "";
+        optionsBuilder.UseOracle(connectionString);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
