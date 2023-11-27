@@ -6,10 +6,11 @@ public partial class ModelContext : DbContext
 {
     public ModelContext() { }
     public ModelContext(DbContextOptions<ModelContext> options) : base(options) { }
-    public virtual DbSet<Contact> Addresses { get; set; }
+    public virtual DbSet<Contact> Contacts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+        
         optionsBuilder.UseOracle("ConnectionStrings:DefaultConnection");
     }
 
